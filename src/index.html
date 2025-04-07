@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Very Insecure REST API</title>
+</head>
+<body>
+    <h1>Hello 👋</h1>
+    <p>
+        This is an example REST API that is vulnerable to SQL injections.
+        It simulates a database of a nonprofit organization that contains all donations.
+        Your goal is to find a vulnerable endpoint that allows SQL injections.
+    </p>
+    <p>Good Luck!</p>
+    <h2>How to use the API</h2>
+
+    <p>
+        Only GET requests are allowed!
+    </p>
+
+    <h3>Donors</h3>
+
+    <p>
+        You can query all donors with the following endpoint:
+    </p>
+    <code>
+        GET /donor
+    </code>
+    <p>
+        Additionally, you can query a specific donor and all corresponding donations with this endpoint:
+    </p>
+    <code>
+        GET /donor/&ltdonor id&gt
+    </code>
+    <p>
+        Finally, you can filter donors by first name and last name:
+    </p>
+
+    <code>
+        GET /donor/?first_name=&ltfirst name&gt<br>
+    </code>
+    <code>
+        GET /donor/?last_name=&ltlast name&gt<br>
+    </code>
+    <code>
+        GET /donor/?first_name=&ltfirst name&gt&last_name=&ltlast name&gt
+    </code>
+
+    <h3>Donations</h3>
+
+    <p>
+        You can query all donations with the following endpoint:
+    </p>
+
+    <code>
+        GET /donation
+    </code>
+
+    <p>
+        To query a specific donation, including the donor's first and last name, use this endpoint:
+    </p>
+
+    <code>
+        GET /donation/&ltdonation id&gt
+    </code>
+    
+    <style>
+        code {
+            margin-left: 1rem;
+        }
+    </style>
+</body>
+</html>

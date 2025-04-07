@@ -1,0 +1,20 @@
+{
+  "name": "project_561",
+  "version": "1.0.0",
+  "description": "Project source-code for COMPSCI 561",
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "start": "node ./src/index.js"
+  },
+  "author": "Andreas Gerasimow",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "nodemon": "^3.1.9",
+    "pg-promise": "^11.13.0"
+  }
+}
