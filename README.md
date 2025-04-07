@@ -44,8 +44,8 @@ First, create a .env file with the following content in the root directory of th
     PORT_NUMBER=8080
 
     # postgresql database variables
-    POSTGRES_PASSWORD=postgres
-    POSTGRES_USER=postgres
+    POSTGRES_PASSWORD=<postgres password>
+    POSTGRES_USER=<postgres username>
     POSTGRES_HOST=db
     POSTGRES_PORT=5432
     POSTGRES_DB=postgres
