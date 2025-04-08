@@ -12,7 +12,7 @@ COPY ./src ./src
 COPY .env ./
 
 # Expose port
-EXPOSE 8080
+EXPOSE 80
 
 # Starting command
 CMD ["node", "./src/index.js"]

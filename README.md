@@ -41,7 +41,7 @@ To query a specific donation, including the donor's first and last name, use thi
 First, create a .env file with the following content in the root directory of the app:
 
     # web application variables
-    PORT_NUMBER=8080
+    PORT_NUMBER=80
 
     # postgresql database variables
     POSTGRES_PASSWORD=<postgres password>
