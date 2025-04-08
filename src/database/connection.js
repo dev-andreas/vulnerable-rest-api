@@ -6,10 +6,9 @@ const db_password = process.env.POSTGRES_PASSWORD;
 const db_user = process.env.POSTGRES_USER;
 const db_host = process.env.POSTGRES_HOST;
 const db_port = process.env.POSTGRES_PORT;
-const db_database = process.env.POSTGRES_DB;
 
 const pgp = pgPromise({});
-const db = pgp(`postgres://${db_user}:${db_password}@${db_host}:${db_port}/${db_database}`);
+const db = pgp(`postgres://${db_user}:${db_password}@${db_host}:${db_port}/${db_user}`);
 
 const init_file = new pgp.QueryFile('./database/init_db.sql');
 

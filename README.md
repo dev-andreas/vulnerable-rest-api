@@ -48,7 +48,6 @@ First, create a .env file with the following content in the root directory of th
     POSTGRES_USER=<postgres username>
     POSTGRES_HOST=db
     POSTGRES_PORT=5432
-    POSTGRES_DB=postgres
 
 You can modify the values of the variables if you wish. However, you must also update the docker-compose.yml file accordingly.
 
