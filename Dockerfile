@@ -1,25 +1,18 @@
-# Build the Node.js application
-FROM node:18 as builder
+FROM node:23-slim
 
+# Setting the working directory
 WORKDIR /app
-
-COPY package*.json ./
 
 # Install dependencies
+COPY package*.json ./
 RUN npm ci
 
-COPY . .
+# Copy all other necessary files
+COPY ./src ./src
+COPY .env ./
 
-# Run the Node.js application
-FROM node:18-slim as runner
-
-WORKDIR /app
-
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/src ./src
-COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/.env ./
-
+# Expose port
 EXPOSE 8080
 
+# Starting command
 CMD ["node", "./src/index.js"]
